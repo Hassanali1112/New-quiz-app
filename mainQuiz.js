@@ -103,7 +103,7 @@ var htmlQuiz = [
       } else{
           quizContainer.style.display = "none"
         resultContainer.style.display = "flex";
-        let percentage = (score / htmlQuiz.length) * 100;
+        let percentage = Math.round((score / htmlQuiz.length) * 100);
         if(percentage > 70){
           resultMessage.innerHTML = "Congradualations";
           resultMessage.style.color = "green";
