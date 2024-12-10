@@ -87,7 +87,7 @@
   // logo 
   let logo = document.querySelector(".logo");
   logo.addEventListener("click",()=>{
-    location.assign("./welcome.html")
+    location.assign("./index.html")
   })
   // code for welcome file
 // sign up
@@ -135,29 +135,50 @@
         text: "Kindly fill all input fields",
         icon: "error"
       });
-    } else if( signInEmail.value === !email || signInPassword === !password ){
+    } else if( signInEmail.value === email && signInPassword.value === password ){
+      userName = document.querySelector("#user-name")
+      console.log(userName)
+      location.assign("./quiz.html")
+     
+    } else {
+      console.table(signInEmail.value,signInPassword.value)
       Swal.fire({
         title: "Email Or Password is invalid",
         text: "Kindly fill all input fields properly",
         icon: "error"
       });
-    } else if(!email || !password){
-      Swal.fire({
-        title: "user not found",
-        text: "Kindly create an account first",
-        icon: "error"
-      });
-      signInEmail.value = ""
-      signInPassword.value = ""
-    }
-    else {
-      userName = document.querySelector("#user-name")
-      console.log(userName)
-      // userName.innerHTML = name;
-      location.assign("./quiz.html")
       
       
     }
+    // if( signInEmail.value === "" || signInPassword.value === ""){
+    //   Swal.fire({
+    //     title: "Input field required",
+    //     text: "Kindly fill all input fields",
+    //     icon: "error"
+    //   });
+    // } else if( signInEmail.value === !email || signInPassword === !password ){
+    //   Swal.fire({
+    //     title: "Email Or Password is invalid",
+    //     text: "Kindly fill all input fields properly",
+    //     icon: "error"
+    //   });
+    // } else if(!email || !password){
+    //   Swal.fire({
+    //     title: "user not found",
+    //     text: "Kindly create an account first",
+    //     icon: "error"
+    //   });
+    //   signInEmail.value = ""
+    //   signInPassword.value = ""
+    // }
+    // else {
+    //   userName = document.querySelector("#user-name")
+    //   console.log(userName)
+    //   // userName.innerHTML = name;
+    //   location.assign("./quiz.html")
+      
+      
+    // }
   })
 
   // code for quiz file 

@@ -17,10 +17,13 @@
 }
 .logo{
     cursor: pointer;
+    width: 200px;
+    height: 100%;
 }
-
-.logo span{
-    font-size: 2.5rem;
+.logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .main-section{
     width: 100%;
@@ -29,12 +32,12 @@
     flex-direction: column;
     align-items: center;
     padding: 5rem 0;
-    row-gap: 1.5rem;
+    row-gap: 1rem;
 }
 
 .discription{
-    max-width: 71.1%;
-    font-size: 1.1rem;
+    max-width: 65%;
+    font-size: 1rem;
     font-weight: 200;
     line-height: 1.3;
     text-align: center;
@@ -49,7 +52,7 @@
     font-weight: 100;
 }
 .discription span{
-    font-size: 1.2rem;
+    font-size: 1.02rem;
 }
 .authentication-btn button{
     padding: .4rem 1rem;
@@ -60,4 +63,50 @@
     border-radius: 2px;
     font-weight: 500;
     cursor: pointer;
+}
+
+@media screen and (max-width : 991px){
+    .primary-heading{
+        font-size: 2.5rem;
+    }
+    .secondary-heading{
+        font-size: 2rem;
+    }
+    .discription{
+        font-size: .9rem;
+        max-width: 85%;
+    }
+    .discription span{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width : 763px){
+    .primary-heading{
+        font-size: 2rem;
+    }
+    .secondary-heading{
+        font-size: 1.5rem;
+    }
+    .discription{
+        font-size: .8rem;
+        max-width: 90%;
+    }
+    .discription span{
+        font-size: .802rem;
+    }
+}
+@media screen and (max-width : 576px){
+    .primary-heading{
+        font-size: 1.5rem;
+    }
+    .secondary-heading{
+        font-size: 1rem;
+    }
+    .discription{
+        font-size: .6rem;
+        max-width: 90%;
+    }
+    .discription span{
+        font-size: .602rem;
+    }
 }
