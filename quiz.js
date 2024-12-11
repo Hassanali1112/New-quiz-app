@@ -83,6 +83,7 @@
 //   //   },
 //   ];
   let userName;
+  let newUser = {};
 
   // logo 
   let logo = document.querySelector(".logo");
@@ -99,6 +100,9 @@
   let signUpEmail = document.querySelector("#email")
   let signUpPassword = document.querySelector("#password")
   let signUp = document.querySelector("#sumitSignUp");
+  let signUpClose = document.querySelector(".signupClose");
+  let signInModal = document.querySelector(".sign-in");
+
   signUp.addEventListener("click",()=>{
     if(signUpName.value === "" || signUpEmail.value === "" || signUpPassword.value === ""){
       Swal.fire({
@@ -110,15 +114,23 @@
       name = signUpName.value;
       email = signUpEmail.value;
       password = signUpPassword.value;
-      console.table(name,email,password)
+      // adding values in object
+      newUser.name = signUpName.value;
+      newUser.email = signUpEmail.value;
+      newUser.password = signUpPassword.value;
+      console.log(newUser)
       signUpName.value = "";
       signUpEmail.value = "";
       signUpPassword.value = "";
+      let userData = JSON.stringify(newUser)
+      localStorage.setItem("userData",userData)
       Swal.fire({
         title: "Account has been created",
         text: "For taking test kindly login",
         icon: "success"
       });
+      signUpClose.click()
+      signInModal.click()
       
     }
   });
@@ -129,16 +141,20 @@
    
   let signIn = document.querySelector("#sumitSignIn");
   signIn.addEventListener("click",()=>{
+    let userData = localStorage.getItem("userData")
+    let data = JSON.parse(userData)
+    
+
     if( signInEmail.value === "" || signInPassword.value === ""){
       Swal.fire({
         title: "Input field required",
         text: "Kindly fill all input fields",
         icon: "error"
       });
-    } else if( signInEmail.value === email && signInPassword.value === password ){
+    } else if( signInEmail.value === data.email && signInPassword.value === data.password ){
       userName = document.querySelector("#user-name")
       console.log(userName)
-      location.assign("./quiz.html")
+      location.assign("./courses/subject.html")
      
     } else {
       console.table(signInEmail.value,signInPassword.value)
