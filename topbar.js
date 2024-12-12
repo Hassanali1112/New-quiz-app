@@ -1,8 +1,5 @@
 // logo
-let logo = document.querySelector(".logo");
-logo.addEventListener("click", () => {
-  location.assign("./index.html");
-});
+
 
 let body = document.querySelector("body");
 let modeBtn = document.querySelector(".mode");
@@ -21,10 +18,10 @@ let checkMode = () => {
   if (mode === "dark") {
     modeBtn.setAttribute("checked","checked")
     body.style.backgroundColor = "black";
-    // body.style.color = "white";
+    body.style.color = "blue";
   } else {
     body.style.backgroundColor = "white";
-    // body.style.color = "black";
+    body.style.color = "black";
   }
 };
 let checkDefaultMode = () => {
