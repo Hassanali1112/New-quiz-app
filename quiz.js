@@ -62,6 +62,8 @@ signIn.addEventListener("click", () => {
   ) {
     userName = document.querySelector("#user-name");
     console.log(userName);
+    signInEmail.value = ""
+    signInPassword.value = ""
     location.assign("./courses/subject.html");
   } else {
     console.table(signInEmail.value, signInPassword.value);
