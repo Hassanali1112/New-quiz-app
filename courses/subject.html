@@ -81,6 +81,11 @@
       logo.addEventListener("click", () => {
         location.assign("../index.html");
       });
+
+      let userName = document.querySelector(".user-name");
+      let userData = localStorage.getItem("userData")
+      let parsedUserData = JSON.parse(userData)
+      userName.innerHTML = parsedUserData.name
     </script>
     <script src="../topbar.js"></script>
     <!-- bootstrap 5 js cdn -->

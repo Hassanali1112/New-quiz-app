@@ -1,10 +1,12 @@
 // logo
 
-
 let body = document.querySelector("body");
 let modeBtn = document.querySelector(".mode");
 
 modeBtn.addEventListener("click", () => {
+  setMode();
+});
+let setMode = () => {
   if (modeBtn.checked) {
     localStorage.setItem("mode", "dark");
     checkMode();
@@ -12,14 +14,15 @@ modeBtn.addEventListener("click", () => {
     localStorage.setItem("mode", "light");
     checkMode();
   }
-});
+};
 let checkMode = () => {
   let mode = localStorage.getItem("mode");
   if (mode === "dark") {
-    modeBtn.setAttribute("checked","checked")
+    modeBtn.setAttribute("checked", "checked");
     body.style.backgroundColor = "black";
     body.style.color = "blue";
   } else {
+    modeBtn.removeAttribute("checked");
     body.style.backgroundColor = "white";
     body.style.color = "black";
   }
@@ -29,9 +32,10 @@ let checkDefaultMode = () => {
   if (mode === null) {
     body.style.backgroundColor = "white";
     body.style.color = "black";
+
     checkMode();
   } else {
     checkMode();
   }
 };
- window.onload = checkDefaultMode()
+window.onload = checkDefaultMode();
