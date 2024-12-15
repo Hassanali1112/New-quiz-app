@@ -252,7 +252,7 @@ let checkQuizAttempt = () => {
     } else {
       Swal.fire({
         title: "Attempted !",
-        text: "you have already attempted best of luck for this attempt!",
+        text: "you attempted befor but failed ! best of luck for this attempt",
         icon: "info",
       });
       loadQuestion();
