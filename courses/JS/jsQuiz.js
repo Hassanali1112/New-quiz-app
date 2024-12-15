@@ -31,95 +31,95 @@ var jsQuiz = [
     option4: "!==",
     answer: "===",
   },
-  {
-    question: "What is the output of: `typeof null`?",
-    option1: "'null'",
-    option2: "'undefined'",
-    option3: "'object'",
-    option4: "'number'",
-    answer: "'object'",
-  },
-  {
-    question:
-      "Which method is used to parse a JSON string into a JavaScript object?",
-    option1: "JSON.stringify()",
-    option2: "JSON.parse()",
-    option3: "JSON.objectify()",
-    option4: "JSON.toObject()",
-    answer: "JSON.parse()",
-  },
-  {
-    question: "What is the correct syntax for a JavaScript arrow function?",
-    option1: "() => { return 'Hello'; }",
-    option2: "function() => { return 'Hello'; }",
-    option3: "() -> { return 'Hello'; }",
-    option4: "function => { return 'Hello'; }",
-    answer: "() => { return 'Hello'; }",
-  },
-  {
-    question: "Which method adds a new element to the end of an array?",
-    option1: "push()",
-    option2: "pop()",
-    option3: "shift()",
-    option4: "unshift()",
-    answer: "push()",
-  },
-  {
-    question: "Which keyword is used to define a constant in JavaScript?",
-    option1: "var",
-    option2: "let",
-    option3: "const",
-    option4: "constant",
-    answer: "const",
-  },
-  {
-    question: "What is the correct way to create an object in JavaScript?",
-    option1: "let obj = {key: 'value'};",
-    option2: "let obj = (key: 'value');",
-    option3: "let obj = [key: 'value'];",
-    option4: "let obj = 'key: value';",
-    answer: "let obj = {key: 'value'};",
-  },
-  {
-    question: "What is the purpose of the `isNaN()` function?",
-    option1: "To check if a value is null",
-    option2: "To check if a value is not a number",
-    option3: "To convert a string to a number",
-    option4: "To check if a value is undefined",
-    answer: "To check if a value is not a number",
-  },
-  {
-    question: "Which JavaScript loop is guaranteed to run at least once?",
-    option1: "for loop",
-    option2: "while loop",
-    option3: "do-while loop",
-    option4: "for-of loop",
-    answer: "do-while loop",
-  },
-  {
-    question: "How can you add a comment in JavaScript?",
-    option1: "// This is a comment",
-    option2: "<!-- This is a comment -->",
-    option3: "' This is a comment",
-    option4: "# This is a comment",
-    answer: "// This is a comment",
-  },
-  {
-    question: "What does the `map()` method do in JavaScript?",
-    option1: "Iterates over an array and filters elements",
-    option2: "Applies a function to each element and creates a new array",
-    option3: "Finds the first matching element in an array",
-    option4: "Reduces an array to a single value",
-    answer: "Applies a function to each element and creates a new array",
-  },
-  {
-    question: "What is the purpose of the `this` keyword in JavaScript?",
-    option1: "To refer to the current object",
-    option2: "To define a variable",
-    option3: "To declare a function",
-    option4: "To create a class",
-    answer: "To refer to the current object",
-  },
+  // {
+  //   question: "What is the output of: `typeof null`?",
+  //   option1: "'null'",
+  //   option2: "'undefined'",
+  //   option3: "'object'",
+  //   option4: "'number'",
+  //   answer: "'object'",
+  // },
+  // {
+  //   question:
+  //     "Which method is used to parse a JSON string into a JavaScript object?",
+  //   option1: "JSON.stringify()",
+  //   option2: "JSON.parse()",
+  //   option3: "JSON.objectify()",
+  //   option4: "JSON.toObject()",
+  //   answer: "JSON.parse()",
+  // },
+  // {
+  //   question: "What is the correct syntax for a JavaScript arrow function?",
+  //   option1: "() => { return 'Hello'; }",
+  //   option2: "function() => { return 'Hello'; }",
+  //   option3: "() -> { return 'Hello'; }",
+  //   option4: "function => { return 'Hello'; }",
+  //   answer: "() => { return 'Hello'; }",
+  // },
+  // {
+  //   question: "Which method adds a new element to the end of an array?",
+  //   option1: "push()",
+  //   option2: "pop()",
+  //   option3: "shift()",
+  //   option4: "unshift()",
+  //   answer: "push()",
+  // },
+  // {
+  //   question: "Which keyword is used to define a constant in JavaScript?",
+  //   option1: "var",
+  //   option2: "let",
+  //   option3: "const",
+  //   option4: "constant",
+  //   answer: "const",
+  // },
+  // {
+  //   question: "What is the correct way to create an object in JavaScript?",
+  //   option1: "let obj = {key: 'value'};",
+  //   option2: "let obj = (key: 'value');",
+  //   option3: "let obj = [key: 'value'];",
+  //   option4: "let obj = 'key: value';",
+  //   answer: "let obj = {key: 'value'};",
+  // },
+  // {
+  //   question: "What is the purpose of the `isNaN()` function?",
+  //   option1: "To check if a value is null",
+  //   option2: "To check if a value is not a number",
+  //   option3: "To convert a string to a number",
+  //   option4: "To check if a value is undefined",
+  //   answer: "To check if a value is not a number",
+  // },
+  // {
+  //   question: "Which JavaScript loop is guaranteed to run at least once?",
+  //   option1: "for loop",
+  //   option2: "while loop",
+  //   option3: "do-while loop",
+  //   option4: "for-of loop",
+  //   answer: "do-while loop",
+  // },
+  // {
+  //   question: "How can you add a comment in JavaScript?",
+  //   option1: "// This is a comment",
+  //   option2: "<!-- This is a comment -->",
+  //   option3: "' This is a comment",
+  //   option4: "# This is a comment",
+  //   answer: "// This is a comment",
+  // },
+  // {
+  //   question: "What does the `map()` method do in JavaScript?",
+  //   option1: "Iterates over an array and filters elements",
+  //   option2: "Applies a function to each element and creates a new array",
+  //   option3: "Finds the first matching element in an array",
+  //   option4: "Reduces an array to a single value",
+  //   answer: "Applies a function to each element and creates a new array",
+  // },
+  // {
+  //   question: "What is the purpose of the `this` keyword in JavaScript?",
+  //   option1: "To refer to the current object",
+  //   option2: "To define a variable",
+  //   option3: "To declare a function",
+  //   option4: "To create a class",
+  //   answer: "To refer to the current object",
+  // },
 ];
 
 let quizContainer = document.querySelector(".quiz-container");
@@ -219,12 +219,10 @@ nextBtn.addEventListener("click", function () {
       jsQuizResult.result.totalQue = jsQuiz.length;
       jsQuizResult.result.score = score;
       jsQuizResult.result.scoreInPercent = percentage;
-      
 
-      let resultData = JSON.stringify(results);
-      localStorage.setItem("resultData", resultData);
-
-      resultD();
+      // let jsResultData = JSON.stringify(jsQuizResult);
+      // localStorage.setItem("resultData", jsResultData);
+      localStorage.setItem("jsResultData", JSON.stringify(jsQuizResult));
     }
   }
 });
@@ -234,10 +232,30 @@ function deSelectInput() {
     option[i].checked = false;
   }
 }
+let checkQuizAttempt = () => {
+  let jsResultData = JSON.parse(localStorage.getItem("jsResultData"));
+  if (jsResultData) {
+    if (jsResultData.result.scoreInPercent > 70) {
+      quizContainer.style.display = "none";
+      resultContainer.style.display = "flex";
+      resultMessage.innerHTML = "Congradualations";
+      resultMessage.style.color = "green";
+      percentageShow.innerHTML = `${jsResultData.result.scoreInPercent}%`;
+      totalQue.innerHTML = jsResultData.result.totalQue;
+      correcQues.innerHTML = jsResultData.result.score;
+    } else {
+      Swal.fire({
+        title: "Attempted !",
+        text: "you attempted befor but failed ! best of luck for this attempt",
+        icon: "info",
+      });
+      setTimeout(() => {
+        loadQuestion();
+      }, 2000);
+    }
+  } else {
+    loadQuestion();
+  }
+};
 
-window.onload = loadQuestion();
-function resultD() {
-  let data = localStorage.getItem("resultData");
-  let newData = JSON.parse(data);
-  console.log(newData);
-}
+window.onload = checkQuizAttempt();
