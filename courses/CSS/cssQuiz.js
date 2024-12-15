@@ -1,3 +1,7 @@
+
+
+
+
 var cssQuiz = [
   {
     question: "What does CSS stand for?",
@@ -229,7 +233,7 @@ nextBtn.addEventListener("click", function () {
       let cssResultData = JSON.stringify(cssQuizResult);
       localStorage.setItem("cssResultData", cssResultData);
 
-      resultD();
+      // resultD();
     }
   }
 });
@@ -256,6 +260,12 @@ let checkQuizAttempt = () => {
       totalQue.innerHTML = cssResultData.result.totalQue;
       correcQues.innerHTML = cssResultData.result.score;
     } else {
+      Swal.fire({
+        title: "Attempted !",
+        text: "you have already attempted best of luck for this attempt!",
+        icon: "info"
+      });
+      
       loadQuestion();
       // resultMessage.innerHTML = "OOps you're fail better next time";
       // resultMessage.style.color = "red";
@@ -264,7 +274,7 @@ let checkQuizAttempt = () => {
       // correcQues.innerHTML = cssResultData.result.score;
     }
   } else {
-    console.log("nor working")
+    
     loadQuestion();
   }
 };
