@@ -28,8 +28,8 @@ var cssQuiz = [
     question: "How do you add an external CSS file to an HTML document?",
     option1: "stylesheet",
     option2: "style src='style.css",
-    option3: "link rel='stylesheet' href='style.css",
-    option4: "css href='style.css'>",
+    option3: "link rel='stylesheet' href='style.css'",
+    option4: "css href='style.css'",
     answer: "link rel='stylesheet' href='style.css'",
   },
   {
@@ -40,90 +40,90 @@ var cssQuiz = [
     option4: "size",
     answer: "font-size",
   },
-  {
-    question: "How do you make text bold in CSS?",
-    option1: "font-weight: bold;",
-    option2: "font-style: bold;",
-    option3: "text-weight: bold;",
-    option4: "text-style: bold;",
-    answer: "font-weight: bold;",
-  },
-  {
-    question: "Which property is used to change the text color of an element?",
-    option1: "font-color",
-    option2: "text-color",
-    option3: "color",
-    option4: "foreground-color",
-    answer: "color",
-  },
-  {
-    question:
-      "Which CSS property controls the layout of items in a flex container?",
-    option1: "display",
-    option2: "justify-content",
-    option3: "align-items",
-    option4: "flex-direction",
-    answer: "display",
-  },
-  {
-    question: "What is the default position value of an HTML element?",
-    option1: "absolute",
-    option2: "relative",
-    option3: "fixed",
-    option4: "static",
-    answer: "static",
-  },
-  {
-    question: "How do you center a block element horizontally using CSS?",
-    option1: "text-align: center;",
-    option2: "margin: 0 auto;",
-    option3: "align-items: center;",
-    option4: "display: center;",
-    answer: "margin: 0 auto;",
-  },
-  {
-    question:
-      "Which property is used to set the space between the border and the content of an element?",
-    option1: "margin",
-    option2: "padding",
-    option3: "border-spacing",
-    option4: "spacing",
-    answer: "padding",
-  },
-  {
-    question: "What does the z-index property in CSS control?",
-    option1: "The stacking order of elements",
-    option2: "The transparency of an element",
-    option3: "The size of an element",
-    option4: "The positioning of an element",
-    answer: "The stacking order of elements",
-  },
-  {
-    question:
-      "Which property is used to create rounded corners for an element?",
-    option1: "border-radius",
-    option2: "corner-radius",
-    option3: "border-round",
-    option4: "corner-round",
-    answer: "border-radius",
-  },
-  {
-    question: "How do you apply a shadow to an element in CSS?",
-    option1: "box-shadow",
-    option2: "shadow-box",
-    option3: "text-shadow",
-    option4: "element-shadow",
-    answer: "box-shadow",
-  },
-  {
-    question:
-      "Which property is used to set the spacing between lines of text?",
-    option1: "line-height",
-    option2: "letter-spacing",
-    option3: "text-indent",
-    option4: "text-spacing",
-    answer: "line-height",
-  },
+  // {
+  //   question: "How do you make text bold in CSS?",
+  //   option1: "font-weight: bold;",
+  //   option2: "font-style: bold;",
+  //   option3: "text-weight: bold;",
+  //   option4: "text-style: bold;",
+  //   answer: "font-weight: bold;",
+  // },
+  // {
+  //   question: "Which property is used to change the text color of an element?",
+  //   option1: "font-color",
+  //   option2: "text-color",
+  //   option3: "color",
+  //   option4: "foreground-color",
+  //   answer: "color",
+  // },
+  // {
+  //   question:
+  //     "Which CSS property controls the layout of items in a flex container?",
+  //   option1: "display",
+  //   option2: "justify-content",
+  //   option3: "align-items",
+  //   option4: "flex-direction",
+  //   answer: "display",
+  // },
+  // {
+  //   question: "What is the default position value of an HTML element?",
+  //   option1: "absolute",
+  //   option2: "relative",
+  //   option3: "fixed",
+  //   option4: "static",
+  //   answer: "static",
+  // },
+  // {
+  //   question: "How do you center a block element horizontally using CSS?",
+  //   option1: "text-align: center;",
+  //   option2: "margin: 0 auto;",
+  //   option3: "align-items: center;",
+  //   option4: "display: center;",
+  //   answer: "margin: 0 auto;",
+  // },
+  // {
+  //   question:
+  //     "Which property is used to set the space between the border and the content of an element?",
+  //   option1: "margin",
+  //   option2: "padding",
+  //   option3: "border-spacing",
+  //   option4: "spacing",
+  //   answer: "padding",
+  // },
+  // {
+  //   question: "What does the z-index property in CSS control?",
+  //   option1: "The stacking order of elements",
+  //   option2: "The transparency of an element",
+  //   option3: "The size of an element",
+  //   option4: "The positioning of an element",
+  //   answer: "The stacking order of elements",
+  // },
+  // {
+  //   question:
+  //     "Which property is used to create rounded corners for an element?",
+  //   option1: "border-radius",
+  //   option2: "corner-radius",
+  //   option3: "border-round",
+  //   option4: "corner-round",
+  //   answer: "border-radius",
+  // },
+  // {
+  //   question: "How do you apply a shadow to an element in CSS?",
+  //   option1: "box-shadow",
+  //   option2: "shadow-box",
+  //   option3: "text-shadow",
+  //   option4: "element-shadow",
+  //   answer: "box-shadow",
+  // },
+  // {
+  //   question:
+  //     "Which property is used to set the spacing between lines of text?",
+  //   option1: "line-height",
+  //   option2: "letter-spacing",
+  //   option3: "text-indent",
+  //   option4: "text-spacing",
+  //   answer: "line-height",
+  // },
 ];
 
 let quizContainer = document.querySelector(".quiz-container");
@@ -199,8 +199,11 @@ nextBtn.addEventListener("click", function () {
       deSelectInput();
       loadQuestion();
     } else {
-      let results = [];
-      let result = {};
+      let cssQuizResult = {
+        quizName: "CSS Quiz",
+        isAttempt: false,
+        result: {},
+      };
       quizContainer.style.display = "none";
       resultContainer.style.display = "flex";
       let percentage = Math.round((score / cssQuiz.length) * 100);
@@ -217,13 +220,14 @@ nextBtn.addEventListener("click", function () {
         totalQue.innerHTML = cssQuiz.length;
         correcQues.innerHTML = score;
       }
-      result.totalQue = cssQuiz.length;
-      result.score = score;
-      result.scoreInPercent = percentage;
-      results.push(result);
+      cssQuizResult.isAttempt = true;
+      cssQuizResult.result.totalQue = cssQuiz.length;
+      cssQuizResult.result.score = score;
+      cssQuizResult.result.scoreInPercent = percentage;
 
-      let resultData = JSON.stringify(results);
-      localStorage.setItem("resultData", resultData);
+      // console.log(cssQuizResult);
+      let cssResultData = JSON.stringify(cssQuizResult);
+      localStorage.setItem("cssResultData", cssResultData);
 
       resultD();
     }
@@ -236,9 +240,33 @@ function deSelectInput() {
   }
 }
 
-window.onload = loadQuestion();
-function resultD() {
-  let data = localStorage.getItem("resultData");
-  let newData = JSON.parse(data);
-  console.log(newData);
-}
+let checkQuizAttempt = () => {
+  let cssResultData = localStorage.getItem("cssResultData");
+  cssResultData = JSON.parse(cssResultData);
+  // console.log(cssResultData.isAttempt)
+  if (cssResultData) {
+    
+    let percentage = cssResultData.result.scoreInPercent;
+    if (percentage > 70) {
+      quizContainer.style.display = "none";
+    resultContainer.style.display = "flex";
+      resultMessage.innerHTML = "Congradualations";
+      resultMessage.style.color = "green";
+      percentageShow.innerHTML = `${percentage}%`;
+      totalQue.innerHTML = cssResultData.result.totalQue;
+      correcQues.innerHTML = cssResultData.result.score;
+    } else {
+      loadQuestion();
+      // resultMessage.innerHTML = "OOps you're fail better next time";
+      // resultMessage.style.color = "red";
+      // percentageShow.innerHTML = `${percentage}%`;
+      // totalQue.innerHTML = cssResultData.result.totalQue;;
+      // correcQues.innerHTML = cssResultData.result.score;
+    }
+  } else {
+    console.log("nor working")
+    loadQuestion();
+  }
+};
+
+window.onload = checkQuizAttempt();
