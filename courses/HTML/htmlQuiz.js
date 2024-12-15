@@ -32,95 +32,95 @@ var htmlQuiz = [
     option4: "To style the input field",
     answer: "To provide a short hint in the input field",
   },
-  {
-    question: "Which attribute is used to specify the character encoding of an HTML document?",
-    option1: "charset",
-    option2: "encoding",
-    option3: "type",
-    option4: "lang",
-    answer: "charset",
-  },
-  {
-    question: "What does the 'target' attribute in an <a> tag specify?",
-    option1: "The size of the link",
-    option2: "The style of the link",
-    option3: "Where to open the linked document",
-    option4: "The type of linked document",
-    answer: "Where to open the linked document",
-  },
-  {
-    question: "What is the default method used by forms to send data?",
-    option1: "GET",
-    option2: "POST",
-    option3: "PUT",
-    option4: "DELETE",
-    answer: "GET",
-  },
-  {
-    question: "Which input type is used to select multiple options in a form?",
-    option1: "text",
-    option2: "checkbox",
-    option3: "radio",
-    option4: "password",
-    answer: "checkbox",
-  },
-  {
-    question: "Which input type is used to upload a file in a form?",
-    option1: "text",
-    option2: "file",
-    option3: "upload",
-    option4: "submit",
-    answer: "file",
-  },
-  {
-    question: "What is the purpose of the 'required' attribute in an input tag?",
-    option1: "To specify the input type",
-    option2: "To validate the input value",
-    option3: "To make the input field mandatory",
-    option4: "To style the input field",
-    answer: "To make the input field mandatory",
-  },
-  {
-    question: "What does HTML stand for?",
-    option1: "Hypertext Machine Language",
-    option2: "Hypertext and Links Markup Language",
-    option3: "Hypertext Markup Language",
-    option4: "Hyper Tool Markup Language",
-    answer: "Hypertext Markup Language",
-  },
+  // {
+  //   question: "Which attribute is used to specify the character encoding of an HTML document?",
+  //   option1: "charset",
+  //   option2: "encoding",
+  //   option3: "type",
+  //   option4: "lang",
+  //   answer: "charset",
+  // },
+  // {
+  //   question: "What does the 'target' attribute in an <a> tag specify?",
+  //   option1: "The size of the link",
+  //   option2: "The style of the link",
+  //   option3: "Where to open the linked document",
+  //   option4: "The type of linked document",
+  //   answer: "Where to open the linked document",
+  // },
+  // {
+  //   question: "What is the default method used by forms to send data?",
+  //   option1: "GET",
+  //   option2: "POST",
+  //   option3: "PUT",
+  //   option4: "DELETE",
+  //   answer: "GET",
+  // },
+  // {
+  //   question: "Which input type is used to select multiple options in a form?",
+  //   option1: "text",
+  //   option2: "checkbox",
+  //   option3: "radio",
+  //   option4: "password",
+  //   answer: "checkbox",
+  // },
+  // {
+  //   question: "Which input type is used to upload a file in a form?",
+  //   option1: "text",
+  //   option2: "file",
+  //   option3: "upload",
+  //   option4: "submit",
+  //   answer: "file",
+  // },
+  // {
+  //   question: "What is the purpose of the 'required' attribute in an input tag?",
+  //   option1: "To specify the input type",
+  //   option2: "To validate the input value",
+  //   option3: "To make the input field mandatory",
+  //   option4: "To style the input field",
+  //   answer: "To make the input field mandatory",
+  // },
+  // {
+  //   question: "What does HTML stand for?",
+  //   option1: "Hypertext Machine Language",
+  //   option2: "Hypertext and Links Markup Language",
+  //   option3: "Hypertext Markup Language",
+  //   option4: "Hyper Tool Markup Language",
+  //   answer: "Hypertext Markup Language",
+  // },
 
-  {
-    question: "What is the purpose of the noscript tag in HTML?",
-    option1: "To run JavaScript code",
-    option2: "To provide alternative content if JavaScript is disabled",
-    option3: "To include a stylesheet",
-    option4: "To define non-breaking spaces",
-    answer: "To provide alternative content if JavaScript is disabled",
-  },
-  {
-    question: "What is the purpose of the 'autoplay' attribute in a video tag?",
-    option1: "To loop the video automatically",
-    option2: "To play the video automatically when the page loads",
-    option3: "To define video controls",
-    option4: "To mute the video",
-    answer: "To play the video automatically when the page loads",
-  },
-  {
-    question: "What does the 'lang' attribute in an HTML tag specify?",
-    option1: "The programming language of the page",
-    option2: "The text alignment of the content",
-    option3: "The language of the document",
-    option4: "The character encoding of the document",
-    answer: "The language of the document",
-  },
-  {
-    question: "What does the 'contenteditable' attribute do in HTML?",
-    option1: "Allows content to be editable by the user",
-    option2: "Makes the content read-only",
-    option3: "Defines the style of the content",
-    option4: "Links the content to external resources",
-    answer: "Allows content to be editable by the user",
-  },
+  // {
+  //   question: "What is the purpose of the noscript tag in HTML?",
+  //   option1: "To run JavaScript code",
+  //   option2: "To provide alternative content if JavaScript is disabled",
+  //   option3: "To include a stylesheet",
+  //   option4: "To define non-breaking spaces",
+  //   answer: "To provide alternative content if JavaScript is disabled",
+  // },
+  // {
+  //   question: "What is the purpose of the 'autoplay' attribute in a video tag?",
+  //   option1: "To loop the video automatically",
+  //   option2: "To play the video automatically when the page loads",
+  //   option3: "To define video controls",
+  //   option4: "To mute the video",
+  //   answer: "To play the video automatically when the page loads",
+  // },
+  // {
+  //   question: "What does the 'lang' attribute in an HTML tag specify?",
+  //   option1: "The programming language of the page",
+  //   option2: "The text alignment of the content",
+  //   option3: "The language of the document",
+  //   option4: "The character encoding of the document",
+  //   answer: "The language of the document",
+  // },
+  // {
+  //   question: "What does the 'contenteditable' attribute do in HTML?",
+  //   option1: "Allows content to be editable by the user",
+  //   option2: "Makes the content read-only",
+  //   option3: "Defines the style of the content",
+  //   option4: "Links the content to external resources",
+  //   answer: "Allows content to be editable by the user",
+  // },
 ];
 
 let quizContainer = document.querySelector(".quiz-container");
@@ -196,8 +196,11 @@ nextBtn.addEventListener("click", function () {
       deSelectInput();
       loadQuestion();
     } else {
-      let results = [];
-      let result = {};
+      let htmlQuizResult = {
+        quizName: "HTML Quiz",
+        isAttempt: false,
+        result: {},
+      };
       quizContainer.style.display = "none";
       resultContainer.style.display = "flex";
       let percentage = Math.round((score / htmlQuiz.length) * 100);
@@ -214,15 +217,15 @@ nextBtn.addEventListener("click", function () {
         totalQue.innerHTML = htmlQuiz.length;
         correcQues.innerHTML = score;
       }
-      result.totalQue = htmlQuiz.length;
-      result.score = score;
-      result.scoreInPercent = percentage;
-      results.push(result);
+      htmlQuizResult.isAttempt = true;
+      htmlQuizResult.result.totalQue = htmlQuiz.length;
+      htmlQuizResult.result.score = score;
+      htmlQuizResult.result.scoreInPercent = percentage;
 
-      let resultData = JSON.stringify(results);
-      localStorage.setItem("resultData", resultData);
+      let htmlResultData = JSON.stringify(htmlQuizResult);
+      localStorage.setItem("htmlResultData", htmlResultData);
 
-      resultD();
+      
     }
   }
 });
@@ -233,10 +236,35 @@ function deSelectInput() {
   }
 }
 
-window.onload = loadQuestion();
+let checkQuizAttempt = () => {
+  let htmlResultData = localStorage.getItem("htmlResultData")
+  htmlResultData = JSON.parse(htmlResultData)
+  console.log(htmlResultData)
+  if(htmlResultData){
+    if(htmlResultData.result.scoreInPercent > 70){
+      
+      quizContainer.style.display = "none"
+      resultContainer.style.display = "flex"
+      resultMessage.innerHTML = "Congradualations";
+        resultMessage.style.color = "green";
+        percentageShow.innerHTML = `${htmlResultData.result.scoreInPercent} %`;
+        totalQue.innerHTML = htmlResultData.result.totalQue;
+        correcQues.innerHTML = htmlResultData.result.score;
+      } else {
+        Swal.fire({
+          title: "Attempted !",
+          text: "you have already attempted best of luck for this attempt!",
+          icon: "info",
+        });
+        loadQuestion();
+      }
+    } else {
+      loadQuestion()
+    }
+    
+  }
 
-function resultD() {
-  let data = localStorage.getItem("resultData");
-  let newData = JSON.parse(data);
-  console.log(newData);
-}
+
+window.onload = checkQuizAttempt();
+
+
