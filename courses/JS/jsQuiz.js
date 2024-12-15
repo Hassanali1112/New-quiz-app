@@ -40,7 +40,8 @@ var jsQuiz = [
     answer: "'object'",
   },
   {
-    question: "Which method is used to parse a JSON string into a JavaScript object?",
+    question:
+      "Which method is used to parse a JSON string into a JavaScript object?",
     option1: "JSON.stringify()",
     option2: "JSON.parse()",
     option3: "JSON.objectify()",
@@ -120,124 +121,123 @@ var jsQuiz = [
     answer: "To refer to the current object",
   },
 ];
-  
-  let quizContainer = document.querySelector(".quiz-container");
-  
-  let question = document.querySelector(".question");
-  
-  let option1 = document.querySelector("#option1");
-  
-  let option2 = document.querySelector("#option2");
-  
-  let option3 = document.querySelector("#option3");
-  
-  let option4 = document.querySelector("#option4");
-  
-  let label1 = document.querySelector("#label1");
-  
-  let label2 = document.querySelector("#label2");
-  
-  let label3 = document.querySelector("#label3");
-  
-  let label4 = document.querySelector("#label4");
-  
-  let option = document.getElementsByName("option");
 
-  
-  let nextBtn = document.querySelector(".nextBtn");
-  
-  let questionNumber = 0;
-  
-  let score = 0;
-  
-  let resultContainer = document.querySelector(".result-container");
-  
-  let resultMessage = document.querySelector(".resulMessage")
-  
-  let percentageShow = document.querySelector(".percentage");
-  
-  let totalQue = document.querySelector(".totalQues")
-  
-  let correcQues = document.querySelector(".correctQues")
-  
-  function loadQuestion() {
-    question.innerHTML = jsQuiz[questionNumber].question;
-    label1.innerHTML = jsQuiz[questionNumber].option1;
-    label2.innerHTML = jsQuiz[questionNumber].option2;
-    label3.innerHTML = jsQuiz[questionNumber].option3;
-    label4.innerHTML = jsQuiz[questionNumber].option4;
-  
-    option1.value = jsQuiz[questionNumber].option1;
-    option2.value = jsQuiz[questionNumber].option2;
-    option3.value = jsQuiz[questionNumber].option3;
-    option4.value = jsQuiz[questionNumber].option4;
-  
-  }
-  nextBtn.addEventListener("click", function () {
-    let inputChecked = false;
-    for (let i = 0; i < option.length; i++) {
-      if (option[i].checked) {
-        inputChecked = true;
-  
-        if (option[i].value === jsQuiz[questionNumber].answer) {
-          score++;
-          
-        }
+let quizContainer = document.querySelector(".quiz-container");
+
+let question = document.querySelector(".question");
+
+let option1 = document.querySelector("#option1");
+
+let option2 = document.querySelector("#option2");
+
+let option3 = document.querySelector("#option3");
+
+let option4 = document.querySelector("#option4");
+
+let label1 = document.querySelector("#label1");
+
+let label2 = document.querySelector("#label2");
+
+let label3 = document.querySelector("#label3");
+
+let label4 = document.querySelector("#label4");
+
+let option = document.getElementsByName("option");
+
+let nextBtn = document.querySelector(".nextBtn");
+
+let questionNumber = 0;
+
+let score = 0;
+
+let resultContainer = document.querySelector(".result-container");
+
+let resultMessage = document.querySelector(".resulMessage");
+
+let percentageShow = document.querySelector(".percentage");
+
+let totalQue = document.querySelector(".totalQues");
+
+let correcQues = document.querySelector(".correctQues");
+
+function loadQuestion() {
+  question.innerHTML = jsQuiz[questionNumber].question;
+  label1.innerHTML = jsQuiz[questionNumber].option1;
+  label2.innerHTML = jsQuiz[questionNumber].option2;
+  label3.innerHTML = jsQuiz[questionNumber].option3;
+  label4.innerHTML = jsQuiz[questionNumber].option4;
+
+  option1.value = jsQuiz[questionNumber].option1;
+  option2.value = jsQuiz[questionNumber].option2;
+  option3.value = jsQuiz[questionNumber].option3;
+  option4.value = jsQuiz[questionNumber].option4;
+}
+nextBtn.addEventListener("click", function () {
+  let inputChecked = false;
+  for (let i = 0; i < option.length; i++) {
+    if (option[i].checked) {
+      inputChecked = true;
+
+      if (option[i].value === jsQuiz[questionNumber].answer) {
+        score++;
       }
     }
-    if (!inputChecked) {
-      Swal.fire({
-          title: "No Option Selected",
-          text: "Please Select Any Option",
-          icon: "error",
-        });
+  }
+  if (!inputChecked) {
+    Swal.fire({
+      title: "No Option Selected",
+      text: "Please Select Any Option",
+      icon: "error",
+    });
+  } else {
+    if (questionNumber < jsQuiz.length - 1) {
+      questionNumber++;
+      deSelectInput();
+      loadQuestion();
     } else {
-      if (questionNumber < jsQuiz.length - 1) {
-        questionNumber++;
-        deSelectInput();
-        loadQuestion();
-      } else{
-        let results = [];
-      let result = {};
-          quizContainer.style.display = "none"
-        resultContainer.style.display = "flex";
-        let percentage = Math.round((score / jsQuiz.length) * 100);
-        if(percentage > 70){
-          resultMessage.innerHTML = "Congradualations";
-          resultMessage.style.color = "green";
-          percentageShow.innerHTML = `${percentage}%`;
-          totalQue.innerHTML = jsQuiz.length;
-          correcQues.innerHTML = score;
+      let jsQuizResult = {
+        quizName: "JS Quiz",
+        isAttempt: false,
+        result: {},
+      };
+      quizContainer.style.display = "none";
+      resultContainer.style.display = "flex";
+      let percentage = Math.round((score / jsQuiz.length) * 100);
+      if (percentage > 70) {
+        resultMessage.innerHTML = "Congradualations";
+        resultMessage.style.color = "green";
+        percentageShow.innerHTML = `${percentage}%`;
+        totalQue.innerHTML = jsQuiz.length;
+        correcQues.innerHTML = score;
       } else {
-          resultMessage.innerHTML = "OOps you're fail better next time";
-          resultMessage.style.color = "red";
-          percentageShow.innerHTML = `${percentage}%`;
-          totalQue.innerHTML = jsQuiz.length;
-          correcQues.innerHTML = score;
+        resultMessage.innerHTML = "OOps you're fail better next time";
+        resultMessage.style.color = "red";
+        percentageShow.innerHTML = `${percentage}%`;
+        totalQue.innerHTML = jsQuiz.length;
+        correcQues.innerHTML = score;
       }
-      result.totalQue = jsQuiz.length;
-      result.score = score;
-      result.scoreInPercent = percentage;
-      results.push(result);
+      jsQuizResult.result.totalQue = jsQuiz.length;
+      jsQuizResult.result.score = score;
+      jsQuizResult.result.scoreInPercent = percentage;
+      
 
       let resultData = JSON.stringify(results);
       localStorage.setItem("resultData", resultData);
 
       resultD();
-      }
-  
-    }
-  });
-  
-  function deSelectInput() {
-    for (let i = 0; i < option.length; i++) {
-      option[i].checked = false;
     }
   }
-  
-  window.onload = loadQuestion();
-  function resultD() {
-    let data = localStorage.getItem("resultData");
-    let newData = JSON.parse(data);
-    console.log(newData);
+});
+
+function deSelectInput() {
+  for (let i = 0; i < option.length; i++) {
+    option[i].checked = false;
   }
+}
+
+window.onload = loadQuestion();
+function resultD() {
+  let data = localStorage.getItem("resultData");
+  let newData = JSON.parse(data);
+  console.log(newData);
+}

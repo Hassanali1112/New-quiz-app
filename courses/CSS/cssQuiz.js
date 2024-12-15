@@ -240,7 +240,7 @@ let checkQuizAttempt = () => {
   let cssResultData = localStorage.getItem("cssResultData");
   cssResultData = JSON.parse(cssResultData);
   if (cssResultData) {
-    let percentage = cssResultData.result.scoreInPercent;
+    let percentage = `${cssResultData.result.scoreInPercent}%`;
     if (percentage > 70) {
       quizContainer.style.display = "none";
       resultContainer.style.display = "flex";
