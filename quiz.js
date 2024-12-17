@@ -121,30 +121,60 @@ let signInPassword = document.querySelector("#signInPassword");
 
 let signIn = document.querySelector("#sumitSignIn");
 signIn.addEventListener("click", () => {
-  let userData = localStorage.getItem("userData");
-  let data = JSON.parse(userData);
-
-  if (signInEmail.value === "" || signInPassword.value === "") {
+  let userData = JSON.parse(localStorage.getItem("userDetails"));
+  console.log(userData);
+  if(userData === null){
+    console.log("null")
     Swal.fire({
-      title: "Input field required",
-      text: "Kindly fill all input fields",
+      title: "email error",
+      text: "email not found",
       icon: "error",
     });
-  } else if (
-    signInEmail.value === data.email &&
-    signInPassword.value === data.password
-  ) {
-    userName = document.querySelector("#user-name");
-    console.log(userName);
-    signInEmail.value = "";
-    signInPassword.value = "";
-    location.assign("./courses/subject.html");
+  } else if(signInEmail.value === userData.email){
+    if(signInPassword.value === userData.password){
+       Swal.fire({
+         title: "login success",
+         text: "WELCOME",
+         icon: "SUCCESS",
+       });
+       location.assign("./courses/subject.html");
+    }else{
+        Swal.fire({
+          title: "incorrect password",
+          text: "kindly enter correct password",
+          icon: "error",
+        });
+    }
   } else {
-    console.table(signInEmail.value, signInPassword.value);
     Swal.fire({
-      title: "Email Or Password is invalid",
-      text: "Kindly fill all input fields properly",
+      title: "email error",
+      text: "email not found",
       icon: "error",
     });
   }
+
+
+  // if (signInEmail.value === "" || signInPassword.value === "") {
+  //   Swal.fire({
+  //     title: "Input field required",
+  //     text: "Kindly fill all input fields",
+  //     icon: "error",
+  //   });
+  // } else if (
+  //   signInEmail.value === data.email &&
+  //   signInPassword.value === data.password
+  // ) {
+  //   userName = document.querySelector("#user-name");
+  //   console.log(userName);
+  //   signInEmail.value = "";
+  //   signInPassword.value = "";
+  //   location.assign("./courses/subject.html");
+  // } else {
+  //   console.table(signInEmail.value, signInPassword.value);
+  //   Swal.fire({
+  //     title: "Email Or Password is invalid",
+  //     text: "Kindly fill all input fields properly",
+  //     icon: "error",
+  //   });
+  // }
 });
