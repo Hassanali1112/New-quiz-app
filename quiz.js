@@ -1,4 +1,4 @@
-// sign up
+
 let newUser;
 
 let signUpName = document.querySelector("#name");
@@ -17,13 +17,14 @@ let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 let passwordRegex =
   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
+// sign up
 signUp.addEventListener("click", () => {
   if (nameRegex.test(signUpName.value)) {
     if (emailRegex.test(signUpEmail.value)) {
       if (passwordRegex.test(signUpPassword.value)) {
         let isUserRegistered = JSON.parse(localStorage.getItem("userDetails"));
         if (!isUserRegistered) {
-          let newUser = {
+          newUser = {
             name: signUpName.value,
             email: signUpEmail.value,
             password: signUpPassword.value,
@@ -32,6 +33,7 @@ signUp.addEventListener("click", () => {
           signUpName.value = "";
           signUpEmail.value = "";
           signUpPassword.value = "";
+          
           swal.fire({
             title: "welcome new user",
             text: "account created successfully",
@@ -42,6 +44,11 @@ signUp.addEventListener("click", () => {
             signInModal.click();
           }, 2000);
         } else if (isUserRegistered.email !== signUpEmail.value) {
+          newUser = {
+            name: signUpName.value,
+            email: signUpEmail.value,
+            password: signUpPassword.value,
+          };
           localStorage.setItem("userDetails", JSON.stringify(newUser));
           signUpName.value = "";
           signUpEmail.value = "";
@@ -61,6 +68,9 @@ signUp.addEventListener("click", () => {
             text: "use any other email address",
             icon: "info",
           });
+          signUpName.value = "";
+          signUpEmail.value = "";
+          signUpPassword.value = "";
         }
       } else {
         swal.fire({
@@ -138,6 +148,7 @@ signIn.addEventListener("click", () => {
          text: "WELCOME",
          icon: "SUCCESS",
        });
+       let isLoggedIn = localStorage.setItem("isLoggedIn", true)
        location.assign("./courses/subject.html");
     }else{
         Swal.fire({

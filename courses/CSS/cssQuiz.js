@@ -237,6 +237,7 @@ function deSelectInput() {
 }
 
 let checkQuizAttempt = () => {
+  checkIsLoggedIn();
   let cssResultData = localStorage.getItem("cssResultData");
   cssResultData = JSON.parse(cssResultData);
   if (cssResultData) {
@@ -263,3 +264,10 @@ let checkQuizAttempt = () => {
 };
 
 window.onload = checkQuizAttempt();
+
+function checkIsLoggedIn() {
+  let isLoggedIn = localStorage.getItem("isLoggedIn");
+  if (isLoggedIn !== "true") {
+    window.location.href = "../../index.html";
+  }
+}

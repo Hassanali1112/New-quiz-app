@@ -82,6 +82,14 @@
       logo.addEventListener("click", () => {
         location.assign("../../index.html");
       });
+      function checkIsLoggedIn() {
+          let isLoggedIn = localStorage.getItem("isLoggedIn");
+          if (isLoggedIn !== "true") {
+            window.location.href = "../../index.html";
+
+          }
+        }
+      window.onload = checkIsLoggedIn()
     </script>
     <script src="../../topbar.js"></script>
     <!-- bootstrap 5 js cdn -->

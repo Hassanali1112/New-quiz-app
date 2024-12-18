@@ -233,6 +233,7 @@ function deSelectInput() {
   }
 }
 let checkQuizAttempt = () => {
+  checkIsLoggedIn()
   let jsResultData = JSON.parse(localStorage.getItem("jsResultData"));
   if (jsResultData) {
     if (jsResultData.result.scoreInPercent > 70) {
@@ -259,3 +260,11 @@ let checkQuizAttempt = () => {
 };
 
 window.onload = checkQuizAttempt();
+function checkIsLoggedIn() {
+  let isLoggedIn = localStorage.getItem("isLoggedIn");
+  if (isLoggedIn !== "true") {
+    window.location.href = "../../index.html";
+    
+  }
+}
+
