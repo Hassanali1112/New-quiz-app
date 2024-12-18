@@ -1,4 +1,5 @@
 // sign up
+let newUser;
 
 let signUpName = document.querySelector("#name");
 let signUpEmail = document.querySelector("#email");
