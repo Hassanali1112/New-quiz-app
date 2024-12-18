@@ -2,6 +2,7 @@
 
 let body = document.querySelector("body");
 let modeBtn = document.querySelector(".mode");
+let logOutBtn = document.querySelector(".logout")
 
 modeBtn.addEventListener("click", () => {
   setMode();
@@ -38,4 +39,11 @@ let checkDefaultMode = () => {
     checkMode();
   }
 };
+
+// logOutBtn.addEventListener("click",()=>{
+//   let isLoggedIn = localStorage.setItem("isLoggedIn", false);
+//   if(isLoggedIn !== "true"){
+//     window.location.href = "index.html"
+//   }
+// })
 window.onload = checkDefaultMode();

@@ -26,3 +26,13 @@
     object-fit: cover;
     object-position: left;
   }
+  .version h6{
+    padding-top: .3rem ;
+    font-size: .8rem;
+  }
+    .logout{
+      font-size: .75rem ;
+      padding: .28rem .5rem;
+      border-radius: .2rem;
+      border: none;
+    }

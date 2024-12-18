@@ -259,6 +259,11 @@ let checkQuizAttempt = () => {
   }
 };
 
+ let logout = document.querySelector(".logout");
+ logout.addEventListener("click", () => {
+   localStorage.setItem("isLoggedIn", false);
+   checkIsLoggedIn();
+ });
 window.onload = checkQuizAttempt();
 function checkIsLoggedIn() {
   let isLoggedIn = localStorage.getItem("isLoggedIn");

@@ -224,8 +224,6 @@ nextBtn.addEventListener("click", function () {
 
       let htmlResultData = JSON.stringify(htmlQuizResult);
       localStorage.setItem("htmlResultData", htmlResultData);
-
-      
     }
   }
 });
@@ -237,34 +235,37 @@ function deSelectInput() {
 }
 
 let checkQuizAttempt = () => {
-  checkIsLoggedIn()
-  let htmlResultData = localStorage.getItem("htmlResultData")
-  htmlResultData = JSON.parse(htmlResultData)
-  console.log(htmlResultData)
-  if(htmlResultData){
-    if(htmlResultData.result.scoreInPercent > 70){
-      
-      quizContainer.style.display = "none"
-      resultContainer.style.display = "flex"
+  checkIsLoggedIn();
+  let htmlResultData = localStorage.getItem("htmlResultData");
+  htmlResultData = JSON.parse(htmlResultData);
+  console.log(htmlResultData);
+  if (htmlResultData) {
+    if (htmlResultData.result.scoreInPercent > 70) {
+      quizContainer.style.display = "none";
+      resultContainer.style.display = "flex";
       resultMessage.innerHTML = "Congradualations";
-        resultMessage.style.color = "green";
-        percentageShow.innerHTML = `${htmlResultData.result.scoreInPercent} %`;
-        totalQue.innerHTML = htmlResultData.result.totalQue;
-        correcQues.innerHTML = htmlResultData.result.score;
-      } else {
-        Swal.fire({
-          title: "Attempted !",
-          text: "you attempted befor but failed ! best of luck for this attempt",
-          icon: "info",
-        });
-        loadQuestion();
-      }
+      resultMessage.style.color = "green";
+      percentageShow.innerHTML = `${htmlResultData.result.scoreInPercent} %`;
+      totalQue.innerHTML = htmlResultData.result.totalQue;
+      correcQues.innerHTML = htmlResultData.result.score;
     } else {
-      loadQuestion()
+      Swal.fire({
+        title: "Attempted !",
+        text: "you attempted befor but failed ! best of luck for this attempt",
+        icon: "info",
+      });
+      loadQuestion();
     }
-    
+  } else {
+    loadQuestion();
   }
+};
 
+let logout = document.querySelector(".logout");
+logout.addEventListener("click", () => {
+  localStorage.setItem("isLoggedIn", false);
+  checkIsLoggedIn();
+});
 
 window.onload = checkQuizAttempt();
 
