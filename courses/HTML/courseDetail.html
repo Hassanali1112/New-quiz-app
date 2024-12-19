@@ -65,7 +65,13 @@
   <script>
     let logo = document.querySelector(".logo");
     logo.addEventListener("click", () => {
-      location.assign("../../index.html");
+      let isLoggedIn = localStorage.getItem("isLoggedIn")
+      if (isLoggedIn === "true") {
+        window.location.assign("../subject.html")
+      } else {
+         location.assign("../../index.html");
+      }
+     
     });
     function checkIsLoggedIn() {
       let isLoggedIn = localStorage.getItem("isLoggedIn");

@@ -190,3 +190,12 @@ signIn.addEventListener("click", () => {
   //   });
   // }
 });
+
+window.onload = function checkIsLoggedIn (){
+  let isLoggedIn = localStorage.getItem("isLoggedIn")
+  console.log(isLoggedIn)
+  if(isLoggedIn === "true"){
+
+    window.location.assign("./courses/subject.html")
+  }
+}
